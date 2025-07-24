@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <div class="star"></div>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>contador</title>
+
+    <style>
+
+        button {
+            color: aquamarine;
+            background: black;
+            border-radius: 15px;
+            font-size: 20px;
+        }
+        p {
+            font-size: 70px;
+            color: green
+        }
+        *{ 
+            margin: 0;
+            box-sizing: border-box;
+        }
+        section {
+            background: blue;
+            color:whitesmoke;
+            padding: 30px;
+            border-radius: 30px;
+            text-align: center;
+            color : pink
+        }
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+        }
+        .star {
+  width: 150px;
+  height: 150px;
+  background: gray;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  margin: 50px;
+}
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <section>
+    <h1>meu contador numero 1 //23/07/2025</h1>
+    <p>0</p>
+    <button onclick="mais()">mais</button>
+    <button onclick="menos()">menos</button>
+    <button onclick="resetar()">resetar</button>
+    <button onclick="multiplicar()">multiplicar</button>
+    <button onclick="dividir()">dividir por 2</button>
+    <button onclick="raiz()">raiz quadrada</button>
+    </section>
+
+    <script>
+     let numero = 0 
+
+function mais() {
+    numero ++
+    mostranumero()
+       }
+function menos() {
+    numero --
+    mostranumero()
+        }
+function
+    resetar() {
+        numero = 0
+        mostranumero()
+    }
+    function multiplicar() {
+        numero *= 2
+        mostranumero()
+    }
+    function dividir() {
+        numero /= 2 
+        mostranumero()
+    }
+    function raiz() {
+        numero = Math.sqrt(numero)
+        mostranumero()
+    }
+    function mostranumero() {
+        const p = document.querySelector("p")
+        p.innerText = numero 
+    }
+    mostranumero()
+    </script>
+</body>
+
+</html>
